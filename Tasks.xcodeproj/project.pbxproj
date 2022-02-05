@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6F4ED9D770F0131DC72FE078 /* Pods_TasksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24BC4842F987E13E0449956 /* Pods_TasksTests.framework */; };
 		8476B87944DA06A9C2969CC0 /* Pods_Tasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A107DCD3420985C97AD00BCE /* Pods_Tasks.framework */; };
+		AB1BCF6E27AED89F0011E88C /* TasksTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BCF6D27AED89F0011E88C /* TasksTVCell.swift */; };
+		AB1BCF7227AEE1B00011E88C /* ROTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BCF7127AEE1B00011E88C /* ROTasks.swift */; };
+		AB1BCF7427AEE2090011E88C /* RMTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BCF7327AEE2090011E88C /* RMTasks.swift */; };
+		AB1BCF7627AEF6EE0011E88C /* EditTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BCF7527AEF6EE0011E88C /* EditTaskVC.swift */; };
 		ABBF53BA27AE9CE400337575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF53B927AE9CE400337575 /* AppDelegate.swift */; };
 		ABBF53BE27AE9CE400337575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBF53BD27AE9CE400337575 /* ViewController.swift */; };
 		ABBF53C127AE9CE400337575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBF53BF27AE9CE400337575 /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 		570D4B80FA09046944B647FB /* Pods-Tasks-TasksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks-TasksUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tasks-TasksUITests/Pods-Tasks-TasksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A107DCD3420985C97AD00BCE /* Pods_Tasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A915C291524011EBE543F45C /* Pods-TasksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasksTests.release.xcconfig"; path = "Target Support Files/Pods-TasksTests/Pods-TasksTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB1BCF6D27AED89F0011E88C /* TasksTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTVCell.swift; sourceTree = "<group>"; };
+		AB1BCF7127AEE1B00011E88C /* ROTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROTasks.swift; sourceTree = "<group>"; };
+		AB1BCF7327AEE2090011E88C /* RMTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMTasks.swift; sourceTree = "<group>"; };
+		AB1BCF7527AEF6EE0011E88C /* EditTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVC.swift; sourceTree = "<group>"; };
 		ABBF53B627AE9CE400337575 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBF53B927AE9CE400337575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABBF53BD27AE9CE400337575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +117,58 @@
 				EF62D25AECD0BA9F7265B086 /* Pods-TasksTests.debug.xcconfig */,
 				A915C291524011EBE543F45C /* Pods-TasksTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB1BCF7727AEFC120011E88C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ABBF53BD27AE9CE400337575 /* ViewController.swift */,
+				AB1BCF7527AEF6EE0011E88C /* EditTaskVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AB1BCF7827AEFC2C0011E88C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AB1BCF6D27AED89F0011E88C /* TasksTVCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		AB1BCF7927AEFC3A0011E88C /* Realm database */ = {
+			isa = PBXGroup;
+			children = (
+				AB1BCF7A27AEFC4F0011E88C /* Realm Objects */,
+				AB1BCF7B27AEFC5C0011E88C /* Realm Manager */,
+			);
+			path = "Realm database";
+			sourceTree = "<group>";
+		};
+		AB1BCF7A27AEFC4F0011E88C /* Realm Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AB1BCF7127AEE1B00011E88C /* ROTasks.swift */,
+			);
+			path = "Realm Objects";
+			sourceTree = "<group>";
+		};
+		AB1BCF7B27AEFC5C0011E88C /* Realm Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AB1BCF7327AEE2090011E88C /* RMTasks.swift */,
+			);
+			path = "Realm Manager";
+			sourceTree = "<group>";
+		};
+		AB1BCF7C27AEFC8E0011E88C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ABBF53BF27AE9CE400337575 /* Main.storyboard */,
+				ABBF53C427AE9CE800337575 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		ABBF53AD27AE9CE400337575 = {
@@ -139,10 +197,11 @@
 			isa = PBXGroup;
 			children = (
 				ABBF53B927AE9CE400337575 /* AppDelegate.swift */,
-				ABBF53BD27AE9CE400337575 /* ViewController.swift */,
-				ABBF53BF27AE9CE400337575 /* Main.storyboard */,
+				AB1BCF7727AEFC120011E88C /* ViewController */,
+				AB1BCF7827AEFC2C0011E88C /* TableViewCells */,
+				AB1BCF7927AEFC3A0011E88C /* Realm database */,
+				AB1BCF7C27AEFC8E0011E88C /* Storyboards */,
 				ABBF53C227AE9CE800337575 /* Assets.xcassets */,
-				ABBF53C427AE9CE800337575 /* LaunchScreen.storyboard */,
 				ABBF53C727AE9CE900337575 /* Info.plist */,
 			);
 			path = Tasks;
@@ -405,7 +464,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABBF53BE27AE9CE400337575 /* ViewController.swift in Sources */,
+				AB1BCF7627AEF6EE0011E88C /* EditTaskVC.swift in Sources */,
 				ABBF53BA27AE9CE400337575 /* AppDelegate.swift in Sources */,
+				AB1BCF6E27AED89F0011E88C /* TasksTVCell.swift in Sources */,
+				AB1BCF7427AEE2090011E88C /* RMTasks.swift in Sources */,
+				AB1BCF7227AEE1B00011E88C /* ROTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
